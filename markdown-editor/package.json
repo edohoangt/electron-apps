@@ -1,0 +1,31 @@
+{
+  "name": "markdown-editor",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set DEBUG=true & electron .",
+    "build:windows": "electron-builder --win --dir",
+    "build:macos": "electron-builder --macos --dir",
+    "publish:github": "electron-builder -mwl -p always"
+  },
+  "build": {
+    "appId": "edo.markdown-editor",
+    "publish": {
+      "provider": "github",
+      "owner": "edohoangt",
+      "repo": "electron-apps"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.1.2",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-updater": "^5.3.0",
+    "simplemde": "^1.11.2"
+  }
+}
